@@ -1,19 +1,19 @@
-Console.Write("Введите пятизначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки А");
+int x1 = Convert.ToInt32(Console.ReadLine());
+int y1 = Convert.ToInt32(Console.ReadLine());
+int z1 = Convert.ToInt32(Console.ReadLine());
 
-int n1 = number % 10;
-int n2 = (number % 100) / 10; 
-int n4 = number / 1000 % 10; 
-int n5 = number / 10000;
+Console.WriteLine("Введите координаты точки B");
+int x2 = Convert.ToInt32(Console.ReadLine());
+int y2 = Convert.ToInt32(Console.ReadLine());
+int z2 = Convert.ToInt32(Console.ReadLine());
 
-if (n1 == n5 & n2 == n4)
-{
-    Console.WriteLine($"Число {number} является палиндромом");
-}
+int pod = ((x1-x2) * (x1-x2)) + ((y1-y2) * (y1-y2)) + ((z1-z2)*(z1-z2));
 
-else
-{
-    Console.WriteLine($"Число {number} не является палиндромом");
-}
+double pod2 = Math.Sqrt(pod);
+
+double pod3 = Math.Round(pod2, 2);
+
+Console.WriteLine(pod3);
 
 
